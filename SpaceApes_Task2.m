@@ -1,6 +1,6 @@
 %% Development Information
 % MAE 466 Spacecraft Dynamics 
-% Project_task_2
+% SpaceApes_task2.m
 % 
 % input:
 %
