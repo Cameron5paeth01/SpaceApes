@@ -35,9 +35,9 @@ delta_r = r_gmo-r_lmo;
 crosses = skew(delta_r)*n3;
 rc2 = crosses/norm(crosses);
 % find rc1
-rc1 = delta_r/norm(delta_r);
+rc1 = -delta_r/norm(delta_r);
 % find rc3
 rc3 = skew(rc1)*rc2;
 % dcm frame blocks
-R_N_to_Rc = [rc1';rc2';rc3']*[n1,n2.n3];
+R_N_to_Rc = [rc1';rc2';rc3']*[n1,n2,n3];
 end
