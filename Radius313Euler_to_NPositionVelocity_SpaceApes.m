@@ -1,6 +1,7 @@
 %% Development Information
 % MAE 466 Spacecraft Dynamics 
 % Radius313Euler_to_NPositionVelocity_SpaceApes
+% finds rotation matrix from frame given in Euler angles to N frame
 % 
 % input: r (km)
 % input: RAAN (rad)
