@@ -1,28 +1,37 @@
 %% Development Information
-% MAE 466 Spacecraft Dynamics 
-% SpaceApes_task2.m
-% 
-% input:
+% MAE 466 Spacecraft Dynamics
+% Space Apes Project Development
+% SpaceApes_Task2
+% finds N frame position and velocity of both satellites
 %
-% output[ax]:
+% inputs: orbital elements of both satellites and Mars Planet Data
+%
+% output: N frame position and velocity of both satellites
 % 
-% Assumptions:
-% (1) None
-% 
+% requires Kepler_orbit_prop_Sampson
+% requires Radius313Euler_to_NPositionVelocity_SpaceApes
+%
 % Primary Developer Contact Information:
+% Cameron Spaeth
+% Undergraduate Student
+% Statler College of Engineering & Mineral Resources
+% Dept. Mechanical and Aerospace Engineering
+% West Virginia University (WVU)
+% cds0060@mix.wvu.edu
+%
 % Noah Sampson
-% Student
+% Undergraduate Student
 % Statler College of Engineering & Mineral Resources
 % Dept. Mechanical and Aerospace Engineering
 % West Virginia University (WVU)
 % nrs0025@mix.wvu.edu
 %
+%
 % Development History
 % Date              Developer        Comments
 % ---------------   -------------    --------------------------------
-% Oct 13, 2022    N.Sampson        Initial implemention
-%
-%%
+% Oct. 2022         Cameron S.       
+% Oct. 2022         Noah    S.
 %set initial values of spacecraft orbits
 planref=loadPlanetReferenceData;
 mu=planref.Mars.mu;
