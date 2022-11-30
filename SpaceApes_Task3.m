@@ -1,9 +1,17 @@
 %% Development Information
-% MAE 466 Spacecrafty Dynamics
+% MAE 466 Spacecraft Dynamics
 % Space Apes Project Development
-% 
+% SpaceApes_Task3
+% finds DCM and omega from N frame to hill frame for both satellites
 %
+% inputs: orbital elements of both satellites and Mars Planet Data
+%
+% output: DCM and omega from N frame to hill frame for both satellites
 % 
+% requires Kepler_orbit_prop_Sampson
+% requires Radius313Euler_to_NPositionVelocity_SpaceApes
+% requires DCM_N_to_H_SpaceApes
+%
 % Primary Developer Contact Information:
 % Cameron Spaeth
 % Undergraduate Student
@@ -25,7 +33,6 @@
 % ---------------   -------------    --------------------------------
 % Oct. 2022         Cameron S.       
 % Oct. 2022         Noah    S.
-%%
 close all
 clear
 clc
@@ -54,7 +61,7 @@ n_G = sqrt(mu/a_G^3); %rad/s
 nu_fin_L=deg2rad(nu_fin_L);
 [nu_fin_G,k_G] = kepler_orbit_prop_Sampson(a_G,e_G,rad2deg(nu_init_G),t,mu);
 nu_fin_G=deg2rad(nu_fin_G); 
-% Functions
+% Solve for the DCM and Omega
 [r_vec_L, r_dot_vec_L] = Radius313Euler_to_NPositionVelocity_SpaceApes(r_mars,RAAN_L,i_L,nu_fin_L,mu);
 [r_vec_G, r_dot_vec_G] = Radius313Euler_to_NPositionVelocity_SpaceApes(r_mars,RAAN_G,i_G,nu_fin_G,mu);
 [R_N_to_L, omega_L_rel_N_as_L] = DCM_N_to_H_SpaceApes(r_vec_L, r_dot_vec_L,n_L);
