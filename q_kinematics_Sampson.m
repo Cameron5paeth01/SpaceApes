@@ -1,6 +1,7 @@
 % Development Information
 % MAE 466 Spacecraft Dynamics 
 % q_kinematics_Sampson
+% kinematic equation for quaternion
 % 
 % input: t (sec)
 % input: q size(4x1)
