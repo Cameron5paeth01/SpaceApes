@@ -1,9 +1,17 @@
 %% Development Information
 % MAE 466 Spacecraft Dynamics
 % Space Apes Project Development
-% 
+% SpaceApes_Task7
+% finds Attitude Error for all pointing frames
 %
+% inputs: orbital elements of both satellites and Mars Planet Data
+%
+% output: attitude error for all pointing frames
 % 
+% requires Kepler_orbit_prop_Sampson
+% requires Radius313Euler_to_NPositionVelocity_SpaceApes
+% requires DCM_N_to_H_SpaceApes
+%
 % Primary Developer Contact Information:
 % Cameron Spaeth
 % Undergraduate Student
@@ -23,8 +31,8 @@
 % Development History
 % Date              Developer        Comments
 % ---------------   -------------    --------------------------------
-% Nov. 2022         Noah S.       
-%                         Cameron S.
+% Nov. 2022         Cameron S.       
+% Nov. 2022         Noah    S.
 % initial conditions
 q_N_to_B = [1/3;2/5;-8/15;2/3];
 omega_B_rel_N = deg2rad([1;1.75;-2.2]);
