@@ -1,3 +1,40 @@
+%% Development Information
+% MAE 466 Spacecraft Dynamics
+% Space Apes Project Development
+% SpaceApes_Task9
+% propogates quaternion and omega for sun pointing frame
+%
+% inputs: initial quaternion and omega
+% inputs: inertia matrix
+% inputs: T_i, Zeta_i
+%
+% output: quaternion and omega
+% 
+% requires omega_kinematics_Sampson
+% requires q_kinematics_Sampson
+% requires attitude_error_SpaceApes
+%
+% Primary Developer Contact Information:
+% Cameron Spaeth
+% Undergraduate Student
+% Statler College of Engineering & Mineral Resources
+% Dept. Mechanical and Aerospace Engineering
+% West Virginia University (WVU)
+% cds0060@mix.wvu.edu
+%
+% Noah Sampson
+% Undergraduate Student
+% Statler College of Engineering & Mineral Resources
+% Dept. Mechanical and Aerospace Engineering
+% West Virginia University (WVU)
+% nrs0025@mix.wvu.edu
+%
+%
+% Development History
+% Date              Developer        Comments
+% ---------------   -------------    --------------------------------
+% Nov. 2022         Cameron S.       
+% Nov. 2022         Noah    S.
 runtime = 400; % seconds
 h = 1; % timestep in seconds
 t = 0; % dummy variable for functions
