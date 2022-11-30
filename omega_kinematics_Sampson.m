@@ -1,6 +1,7 @@
 % Development Information
 % MAE 466 Spacecraft Dynamics 
 % omega_kinematics_Sampson
+% kinematic equation for omega
 % 
 % input: t (sec)
 % input: omega size(3x1) (rad)
