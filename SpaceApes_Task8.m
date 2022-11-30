@@ -1,3 +1,39 @@
+%% Development Information
+% MAE 466 Spacecraft Dynamics
+% Space Apes Project Development
+% SpaceApes_Task8
+% propogates quaternion and omega using Runge Kutta
+%
+% inputs: initial quaternion and omega
+% inputs: inertia matrix
+% inputs: torque
+%
+% output: quaternion and omega
+% 
+% requires omega_kinematics_Sampson
+% requires q_kinematics_Sampson
+%
+% Primary Developer Contact Information:
+% Cameron Spaeth
+% Undergraduate Student
+% Statler College of Engineering & Mineral Resources
+% Dept. Mechanical and Aerospace Engineering
+% West Virginia University (WVU)
+% cds0060@mix.wvu.edu
+%
+% Noah Sampson
+% Undergraduate Student
+% Statler College of Engineering & Mineral Resources
+% Dept. Mechanical and Aerospace Engineering
+% West Virginia University (WVU)
+% nrs0025@mix.wvu.edu
+%
+%
+% Development History
+% Date              Developer        Comments
+% ---------------   -------------    --------------------------------
+% Nov. 2022         Cameron S.       
+% Nov. 2022         Noah    S.
 runtime = 100; % seconds
 h = 1; % timestep in seconds
 t = 0; % dummy variable for functions
