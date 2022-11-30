@@ -47,9 +47,10 @@ for i = [1:h:runtime]
     X_iplush = X_iplush';
     X(i+h,:) = X_iplush;
 end
-%omega_500 = [X(501,5);X(501,6);X(501,7)];
-%H_B_500 = I_B*omega_500;
-%T_500 = .5*omega_500'*I_B*omega_500;
-q_N_to_B_100 = [X(101,1);X(101,2);X(101,3);X(101,4)];
-%R_N_to_B_500 = q_to_DCM_Sampson(q_N_to_B_500);
-%H_N_500 = R_N_to_B_500'*H_B_500;
+endtime = runtime+1;
+omega_time = [X(endtime,5);X(endtime,6);X(endtime,7)];
+H_B_time = I_B*omega_time;
+T_time = .5*omega_time'*I_B*omega_time;
+q_N_to_B_time = [X(endtime,1);X(endtime,2);X(endtime,3);X(endtime,4)];
+R_N_to_B_time = q_to_DCM_Sampson(q_N_to_B_time);
+H_N_time = R_N_to_B_time'*H_B_time
