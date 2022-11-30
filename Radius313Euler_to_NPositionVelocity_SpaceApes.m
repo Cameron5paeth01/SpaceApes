@@ -1,6 +1,7 @@
 %% Development Information
 % MAE 466 Spacecraft Dynamics 
 % Radius313Euler_to_NPositionVelocity_SpaceApes
+% finds position vector in N frame from orbital elements
 % 
 % input: r (km)
 % input: RAAN (rad)
@@ -11,22 +12,27 @@
 % output: r_N size(3x1)
 % output: r_dot_N size (3x1)
 % 
-% Assumptions:
-% (1) None
-% 
 % Primary Developer Contact Information:
+% Cameron Spaeth
+% Undergraduate Student
+% Statler College of Engineering & Mineral Resources
+% Dept. Mechanical and Aerospace Engineering
+% West Virginia University (WVU)
+% cds0060@mix.wvu.edu
+%
 % Noah Sampson
-% Student
+% Undergraduate Student
 % Statler College of Engineering & Mineral Resources
 % Dept. Mechanical and Aerospace Engineering
 % West Virginia University (WVU)
 % nrs0025@mix.wvu.edu
 %
+%
 % Development History
 % Date              Developer        Comments
 % ---------------   -------------    --------------------------------
-% Oct 13, 2022    N.Sampson        Initial implemention
-%
+% Oct. 2022         Cameron S.       
+% Oct. 2022         Noah    S.
 function [r_N, r_dot_N] = Radius313Euler_to_NPositionVelocity_SpaceApes(r,RAAN,i,nu,mu_mars)
 % find angular velocity
 ThetaDot =sqrt(mu_mars/r^3);
