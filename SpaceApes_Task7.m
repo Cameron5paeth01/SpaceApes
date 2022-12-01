@@ -61,9 +61,7 @@ n_L = sqrt(mu/a_L^3); %rad/s
 [R_N_to_Rn,omega_Rn_rel_N_as_N] = DCM_N_to_Rn_SpaceApes(r_vec_N,r_dot_vec_N,n_L);
 
 [q_Rn_to_B, omega_B_rel_Rn] = AttitudeError_SpaceApes(q_N_to_B,omega_B_rel_N,R_N_to_Rn,omega_Rn_rel_N_as_N);
-% for an unknown reason the q is output inverted and as a long
-% rotation, so it needs to be multiplied by -1
-q_Rn_to_B = -1*q_Rn_to_B;
+
 
 % communications pointing
 PlanetData = loadPlanetReferenceData;
