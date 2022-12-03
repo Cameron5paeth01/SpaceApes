@@ -32,11 +32,15 @@
 % Oct. 2022         Cameron S.       
 % Oct. 2022         Noah    S.
 function [R_N_to_H, omega_H_rel_N_as_N] = DCM_N_to_H_SpaceApes(r_N, r_dot_N,thetadot)
+% define hill frame components
 h_r = r_N/norm(r_N);
 h_h = (skew(r_N)*r_dot_N)/norm(skew(r_N)*r_dot_N);
 h_theta = skew(h_h)*h_r;
+% define N frame
 N = eye(3);
 H = [h_r';h_theta';h_h'];
+% use frame blocks
 R_N_to_H = H*N;
+% find omega from mean motion
 omega_H_rel_N_as_N = R_N_to_H'*thetadot*[0;0;1];
 end
